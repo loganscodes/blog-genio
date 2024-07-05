@@ -1,5 +1,6 @@
 'use client'
 import Home from '../components/Home';
+import LatestNews from '../components/LatestNews';
 import News from '../components/News';
 
 const HomePage = () => {
@@ -7,6 +8,7 @@ const HomePage = () => {
     <>
       <Home />
       <News />
+      <LatestNews/>
     </>
   )
 }
