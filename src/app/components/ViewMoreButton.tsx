@@ -7,7 +7,7 @@ interface Props {
 const ViewMoreButton = ({ slug }: Props) => {
     return (
         <div className='flex justify-end mr-2 m-5'>
-            <Link href={slug} className='text-white bg-gray-500 p-2 rounded-lg hover:underline' >
+            <Link href={slug} className='text-white bg-[#201142] p-2 rounded-lg hover:underline' >
                 Ver más...
             </Link>
         </div>

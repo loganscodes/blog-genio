@@ -1,7 +1,7 @@
 'use client'
 
 import { createContext, useContext, useEffect, useState } from "react";
-import { PostResponse } from "../interfaces/blog-response";
+import { PostResponse } from "../interfaces/post-response";
 
 const PostContext = createContext<PostResponse[]>([])
 export const usePosts = () => useContext(PostContext)

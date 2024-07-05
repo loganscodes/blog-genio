@@ -6,11 +6,9 @@ import Footer from '../components/Footer'
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <PostProvider>
-            <div className='max-w-[1440px] m-auto'>
-                <Navbar/>
+            <Navbar/>
                 {children}
-                <Footer/>
-            </div>
+            <Footer/>
         </PostProvider>
     )
 }
