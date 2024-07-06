@@ -6,8 +6,6 @@ import News from '../components/News';
 import { usePosts } from '../context/PostContext';
 import UILoading from '../components/UI/UILoading';
 
-
-
 const HomePage = () => {
   
   const {  loading } = usePosts()

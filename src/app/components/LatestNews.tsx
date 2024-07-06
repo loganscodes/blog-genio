@@ -1,17 +1,12 @@
 import React from 'react'
 import { usePosts } from '../context/PostContext'
-import { useLoading } from '../hooks/useLoading'
 import CardNews from './CardNews'
 import UITitle from './UI/UITitle'
-import UILoading from './UI/UILoading'
 
 const LatestNews = () => {
 
     const {posts} = usePosts()
-
-
     const latestPosts = posts.slice(3)
-
 
     return (
         <div className='max-w-[1440px] m-auto mt-10' data-aos='zoom-in' data-aos-duration="700">

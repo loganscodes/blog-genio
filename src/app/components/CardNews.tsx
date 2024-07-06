@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import ViewMoreButton from '../components/ViewMoreButton';
 import UITitle from '../components/UI/UITitle';
 import UIPar from '../components/UI/UIPar';
 import { PostResponse } from '../interfaces/post-response';
@@ -16,7 +15,6 @@ interface Props {
 const CardNews = ({ post, fontSize = 'text-lg', dateSize = 'text-sm', sizeImg }: Props) => {
 
     const { formatDate } = useDate()
-
     if(!post) return
 
     return (

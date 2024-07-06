@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import UIPar from './UI/UIPar'
 import UITitle from './UI/UITitle'
 import { PostResponse } from '../interfaces/post-response'
 import UIBack from './UI/UIBack'
