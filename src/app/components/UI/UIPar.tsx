@@ -6,7 +6,6 @@ interface Props {
 }
 
 const UIPar = ({ useDangerous = false, content, className }: Props) => {
-
     const renderContent = useDangerous ? (
         <p className={className} dangerouslySetInnerHTML={{ __html: content.toString() }} />
     ) : (

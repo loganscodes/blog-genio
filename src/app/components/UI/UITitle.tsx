@@ -4,9 +4,7 @@ interface Props {
 }
 
 const UITitle = ({ title, className }: Props) => {
-    return (
-        <h1 className={`${className}`}>{title}</h1>
-    )
+    return <h1 className={`${className}`}>{title}</h1>
 }
 
 export default UITitle

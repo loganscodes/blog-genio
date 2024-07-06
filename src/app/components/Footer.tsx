@@ -1,12 +1,8 @@
 import UIPar from "./UI/UIPar"
 import Image from "next/image"
 import UITitle from "./UI/UITitle"
-
 import logoWhite from '../assets/svg/logo-white.svg'
-
 import { LOGOS_ENTRY } from "../constants/logos"
-
-
 
 const Footer = () => {
 

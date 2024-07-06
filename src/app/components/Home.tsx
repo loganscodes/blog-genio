@@ -1,15 +1,8 @@
 'use client'
-import { useEffect } from 'react'
 import UITitle from './UI/UITitle'
 import UIPar from './UI/UIPar'
 
-
-
 const Home = () => {
-
-    
-
- 
 
     return (
         <>
