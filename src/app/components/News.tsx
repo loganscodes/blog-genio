@@ -2,10 +2,14 @@ import React from 'react'
 import { usePosts } from '../context/PostContext'
 import UITitle from './UI/UITitle'
 import CardNews from './CardNews'
+import { PostResponse } from '../interfaces/post-response';
 
-const News = () => {
+interface Props {
+    posts: PostResponse[]
+}
 
-    const { posts } = usePosts()
+const News = ({ posts }: Props) => {
+
     const recentsPosts = posts.slice(0, 3)
 
     return (

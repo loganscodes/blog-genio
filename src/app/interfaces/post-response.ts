@@ -13,3 +13,4 @@ export interface PostResponse {
     date: string;
     jetpack_featured_media_url: string;
 }
+

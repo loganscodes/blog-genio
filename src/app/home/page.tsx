@@ -1,25 +1,31 @@
-'use client'
-import { Suspense, useEffect } from 'react';
 import Home from '../components/Home';
 import LatestNews from '../components/LatestNews';
 import News from '../components/News';
-import { usePosts } from '../context/PostContext';
-import UILoading from '../components/UI/UILoading';
+import { PostResponse } from '../interfaces/post-response';
 
-const HomePage = () => {
+
   
-  const {  loading } = usePosts()
+const getPosts = async() => {
+  const data: PostResponse[] = await fetch('https://fernandafamiliar.soy/wp-json/wp/v2/posts')
+  .then( res => res.json())
 
-  if (loading) {
-      return <UILoading/>;
-    }
+  return data
+}
 
+
+const HomePage = async () => {
+
+  const posts = await getPosts()
+
+  console.log(posts)
 
   return (
+    
+
     <>
       <Home />
-      <News />
-      <LatestNews/>
+      <News posts={posts} />
+      <LatestNews posts={posts}/>
     </>
   )
 }
