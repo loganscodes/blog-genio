@@ -13,9 +13,10 @@ const CustomContent: React.FC<CustomContentProps> = ({ content }) => {
       const images = contentRef.current.querySelectorAll('img');
       images.forEach((img) => {
         img.style.maxWidth = '500px';
-        img.style.height = '500px';
+        img.style.height = '600px';
         img.style.marginTop = '100px'
         img.style.marginBottom = '100px'
+        img.style.objectFit = 'cover'
       });
     }
   }, [content]);

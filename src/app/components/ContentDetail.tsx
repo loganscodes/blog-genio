@@ -11,7 +11,7 @@ interface Props {
 
 const ContentDetail = ({ post }: Props) => {
     return (
-        <div className='max-w-[1440px] m-auto'>
+        <div className='max-w-[1440px] m-auto' data-aos="zoom-out" data-aos-duration="800" >
             <UIBack/>
                 
             <UITitle className='uppercase font-bold text-4xl text-center p-10' title={post.title.rendered} />
