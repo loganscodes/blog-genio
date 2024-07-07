@@ -1,9 +1,11 @@
+'use client'
 import Image from 'next/image';
 import UITitle from '../components/UI/UITitle';
 import UIPar from '../components/UI/UIPar';
 import { PostResponse } from '../interfaces/post-response';
 import { useDate } from '../hooks/useDate';
 import { Link } from 'next-view-transitions';
+import { sendGTMEvent } from '@next/third-parties/google';
 
 interface Props {
     post?: PostResponse
@@ -14,11 +16,13 @@ interface Props {
 
 const CardNews = ({ post, fontSize = 'text-lg', dateSize = 'text-sm', sizeImg }: Props) => {
 
+    
+
     const { formatDate } = useDate()
-    if(!post) return
+    if (!post) return
 
     return (
-        <Link href={`home/${post.slug}`}>
+        <Link href={`home/${post.slug}`} onClick={() => sendGTMEvent({ event: 'buttonClicked', value: 'W7R8Q5DT' })}>
             <div className="relative w-full ">
                 <Image src={post.jetpack_featured_media_url} width={500} height={500} alt='' className={`${sizeImg}`} />
                 <div className="absolute bottom-0 right-0 bg-black bg-opacity-50 text-white p-2 w-full">
