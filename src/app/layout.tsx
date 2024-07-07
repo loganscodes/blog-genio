@@ -23,7 +23,7 @@ export default function RootLayout({
         <body className={`${inter.className}`}>
           {children}
           <GoogleTagManager gtmId="GTM-W7R8Q5DT" />
-          {/* <GoogleAnalytics gaId='G-LK4HDSF5HR' /> */}
+          <GoogleAnalytics gaId='G-LK4HDSF5HR' />
         </body>
       </html>
     </ViewTransitions>
