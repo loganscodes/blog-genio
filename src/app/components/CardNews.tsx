@@ -22,7 +22,7 @@ const CardNews = ({ post, fontSize = 'text-lg', dateSize = 'text-sm', sizeImg }:
     if (!post) return
 
     return (
-        <Link href={`home/${post.slug}`} onClick={() => sendGTMEvent({event: 'buttonClicked', value: 'xyz'})} >
+        <Link id='news' href={`home/${post.slug}`} onClick={() => sendGTMEvent({event: 'buttonClicked', value: 'xyz'})} >
             <div className="relative w-full" >
                 <Image src={post.jetpack_featured_media_url} width={500} height={500} alt='' className={`${sizeImg}`} />
                 <div className="absolute bottom-0 right-0 bg-black bg-opacity-50 text-white p-2 w-full">
