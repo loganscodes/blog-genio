@@ -20,10 +20,27 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="es">
+        <head>
+          <Script
+            id="google-analytics"
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=G-LK4HDSF5HR`}
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-LK4HDSF5HR');
+            `,
+            }}
+          />
+        </head>
         <body className={`${inter.className}`}>
           {children}
           <GoogleTagManager gtmId="GTM-W7R8Q5DT" />
           <GoogleAnalytics gaId='G-LK4HDSF5HR' />
+          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7R8Q5DT"
+            height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript>
         </body>
       </html>
     </ViewTransitions>
