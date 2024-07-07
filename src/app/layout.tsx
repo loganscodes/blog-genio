@@ -20,34 +20,12 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="es">
-        <head>
-          <Script
-            strategy="afterInteractive"
-            src={`https://www.googletagmanager.com/gtag/js?id=G-LK4HDSF5HR`}
-          />
-          <Script
-            id="google-analytics"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-LK4HDSF5HR');
-            `,
-            }}
-          />
-        </head>
-        <GoogleTagManager gtmId="GTM-W7R8Q5DT" />
-        <GoogleAnalytics gaId='G-LK4HDSF5HR' />
         <body className={`${inter.className}`}>
           {children}
-          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7R8Q5DT"
-            height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript>
+          <GoogleTagManager gtmId="GTM-W7R8Q5DT" />
+          {/* <GoogleAnalytics gaId='G-LK4HDSF5HR' /> */}
         </body>
       </html>
-
     </ViewTransitions>
-
   );
 }

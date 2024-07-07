@@ -23,7 +23,7 @@ const CardNews = ({ post, fontSize = 'text-lg', dateSize = 'text-sm', sizeImg }:
 
     return (
         <Link href={`home/${post.slug}`} >
-            <div className="relative w-full ">
+            <div className="relative w-full" onClick={() => ({event: 'buttonClicked', value: 'xyz'})}>
                 <Image src={post.jetpack_featured_media_url} width={500} height={500} alt='' className={`${sizeImg}`} />
                 <div className="absolute bottom-0 right-0 bg-black bg-opacity-50 text-white p-2 w-full">
                     <UITitle className={`${fontSize} font-bold text-center m-auto p-3`} title={post.title.rendered} />
