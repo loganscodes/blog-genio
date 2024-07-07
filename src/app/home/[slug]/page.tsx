@@ -2,13 +2,12 @@ import DetailsNews from '@/app/components/DetailsNews';
 import UILoading from '@/app/components/UI/UILoading';
 import { PostResponse } from '@/app/interfaces/post-response';
 import { notFound } from 'next/navigation';
-import { Metadata } from 'next';
 
 interface Props {
   params: { slug: string };
 }
 
-//! En build time
+
 export async function generateStaticParams() {
   const data: PostResponse[] = await fetch('https://fernandafamiliar.soy/wp-json/wp/v2/posts')
     .then(res => res.json());
@@ -28,7 +27,7 @@ const getPost = async (slug: string): Promise<PostResponse> => {
   try {
     const posts = await fetch(`https://fernandafamiliar.soy/wp-json/wp/v2/posts?slug=${slug}`, {
       next: {
-        revalidate: 60 * 60 * 24 // Revalidate cada 24 horas
+        revalidate: 60 * 60 * 24 
       }
     }).then(resp => resp.json());
 

@@ -17,11 +17,8 @@ const HomePage = async () => {
 
   const posts = await getPosts()
 
-  console.log(posts)
-
   return (
     
-
     <>
       <Home />
       <News posts={posts} />

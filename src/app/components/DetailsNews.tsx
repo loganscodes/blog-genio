@@ -1,11 +1,11 @@
 import { PostResponse } from '@/app/interfaces/post-response';
 import ContentDetail from './ContentDetail';
 
-interface DetailsNewsProps {
+interface Props {
     post: PostResponse;
 }
 
-const DetailsNews: React.FC<DetailsNewsProps> = ({ post }) => {
+const DetailsNews = ({ post }:Props) => {
     return <ContentDetail post={post} />;
 };
 
