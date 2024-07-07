@@ -5,7 +5,7 @@ import UIPar from '../components/UI/UIPar';
 import { PostResponse } from '../interfaces/post-response';
 import { useDate } from '../hooks/useDate';
 import { Link } from 'next-view-transitions';
-import { sendGTMEvent } from '@next/third-parties/google';
+import { sendGTMEvent, sendGAEvent } from '@next/third-parties/google';
 
 interface Props {
     post?: PostResponse
@@ -22,7 +22,7 @@ const CardNews = ({ post, fontSize = 'text-lg', dateSize = 'text-sm', sizeImg }:
     if (!post) return
 
     return (
-        <Link href={`home/${post.slug}`} onClick={() => sendGTMEvent({ event: 'buttonClicked', value: 'W7R8Q5DT' })}>
+        <Link href={`home/${post.slug}`} >
             <div className="relative w-full ">
                 <Image src={post.jetpack_featured_media_url} width={500} height={500} alt='' className={`${sizeImg}`} />
                 <div className="absolute bottom-0 right-0 bg-black bg-opacity-50 text-white p-2 w-full">
