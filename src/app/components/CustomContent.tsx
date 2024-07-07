@@ -1,11 +1,11 @@
 'use client'
 import { useEffect, useRef } from 'react';
 
-interface CustomContentProps {
+interface Props {
   content: string;
 }
 
-const CustomContent: React.FC<CustomContentProps> = ({ content }) => {
+const CustomContent = ({ content }: Props) => {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

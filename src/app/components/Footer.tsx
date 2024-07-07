@@ -11,7 +11,7 @@ const Footer = () => {
     return (
         <footer className="bg-[#201142] flex items-center justify-around mt-16">
 
-            <div className="flex items-center gap-5 ">
+            {/* <div className="flex items-center gap-5 ">
                 <Image src={logoWhite} className="w-20" width={100} height={100} alt="logo" />
                 <UIPar className="text-white" useDangerous={true} content="2024 Noticias México, Inc, <br/> All rights reserved." />
             </div>
@@ -34,7 +34,7 @@ const Footer = () => {
 
             <div>
                 <UIPar className="text-white" content="Subscribete" />
-            </div>
+            </div> */}
 
         </footer>
     )
