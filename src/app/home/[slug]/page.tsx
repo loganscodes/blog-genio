@@ -44,7 +44,6 @@ const getPost = async (slug: string): Promise<PostResponse> => {
 const DynamicPage = async ({ params }: Props) => {
   const post = await getPost(params.slug);
 
-  if (!post) return <UILoading />;
 
   return <DetailsNews post={post} />;
 }
