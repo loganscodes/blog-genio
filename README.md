@@ -49,7 +49,7 @@ Paginas Creadas en build
 
 
 En este caso se uso `slug` de la misma api para generar las paginas en tiempo de `build`, 
-que se revalidara cada 24 hrs esperando cambios. como es un sitio que no trae datos de forma constante, considero que ese tiempo es el correcto. De igual forma se hace el llamado en el lado del servidor. Dandole una capa extra de seguridad, ya que no tenemos los datos en cliente. 
+que se revalidara cada 5 hrs esperando cambios. como es un sitio que no trae datos de forma constante, considero que ese tiempo es el correcto. De igual forma se hace el llamado en el lado del servidor. Dandole una capa extra de seguridad, ya que no tenemos los datos en cliente. 
 
 Se puede apreciar las ventajas de `(ISR)` en producción, mostrando fluides al darle click a la noticia y ver el articulo completo.
 

@@ -1,7 +1,7 @@
 import DetailsNews from '@/app/components/DetailsNews';
-import UILoading from '@/app/components/UI/UILoading';
 import { PostResponse } from '@/app/interfaces/post-response';
 import { notFound } from 'next/navigation';
+import he from 'he';
 
 interface Props {
   params: { slug: string };
@@ -27,7 +27,7 @@ const getPost = async (slug: string): Promise<PostResponse> => {
   try {
     const posts = await fetch(`https://fernandafamiliar.soy/wp-json/wp/v2/posts?slug=${slug}`, {
       next: {
-        revalidate: 60 * 60 * 24 
+        revalidate: 60 * 60 * 5 
       }
     }).then(resp => resp.json());
 
@@ -35,11 +35,18 @@ const getPost = async (slug: string): Promise<PostResponse> => {
       notFound();
     }
 
+    const post = posts[0];
+    post.title.rendered = he.decode(post.title.rendered);
+
     return posts[0];
   } catch (error) {
     notFound();
   }
+
+  
 }
+
+
 
 const DynamicPage = async ({ params }: Props) => {
   const post = await getPost(params.slug);
